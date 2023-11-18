@@ -19,6 +19,8 @@ class Dev(Configuration):
     # Build paths inside the project like this: BASE_DIR / 'subdir'.
     BASE_DIR = Path(__file__).resolve().parent.parent
 
+    AUTH_USER_MODEL = "blango_auth.User"
+
     LOGGING = {
         "version": 1,
         "disable_existing_loggers": False,
@@ -108,6 +110,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
 
+        'blango_auth',
         'blog',
         'crispy_forms',
         'crispy_bootstrap5',
